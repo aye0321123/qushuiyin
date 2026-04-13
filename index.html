@@ -2190,7 +2190,7 @@
 
       // 检查解析次数
       if (!consumeParseCount(getSession())) {
-        showError('解析次数已用完，请使用卡密激活');
+        showUsageLimitModal();
         return;
       }
 
@@ -3053,9 +3053,33 @@
       document.getElementById('helpModal').classList.remove('show');
     }
 
+    // 显示次数用完弹窗
+    function showUsageLimitModal() {
+      document.getElementById('usageLimitModal').classList.add('show');
+    }
+
+    // 关闭次数用完弹窗
+    function closeUsageLimitModal() {
+      document.getElementById('usageLimitModal').classList.remove('show');
+    }
+
+    // 跳转到充值页面
+    function goToRecharge() {
+      closeUsageLimitModal();
+      // 切换到卡密激活标签
+      switchTab('card');
+      // 滚动到页面顶部
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     // 点击弹窗外部关闭
     document.getElementById('helpModal').addEventListener('click',function(e){
       if(e.target===this)closeHelp();
+    });
+
+    // 点击次数用完弹窗外部关闭
+    document.getElementById('usageLimitModal').addEventListener('click',function(e){
+      if(e.target===this)closeUsageLimitModal();
     });
 
     document.getElementById('videoUrl').addEventListener('keydown', e => {
@@ -3160,6 +3184,45 @@
         </div>
         <div style="background:rgba(0,212,255,0.05);border:1px solid rgba(0,212,255,0.2);border-radius:8px;padding:12px;">
           <p style="color:var(--accent);font-size:12px;margin:0;">💡 遇到问题请检查网络连接后重试</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 次数用完弹窗 -->
+  <div class="modal-mask" id="usageLimitModal">
+    <div class="modal" style="max-width:450px;">
+      <div class="modal-header">
+        <div class="modal-icon" style="font-size:48px;">⚠️</div>
+        <div class="modal-title" style="color:var(--error);">解析次数已用完</div>
+        <div class="modal-sub">您的免费解析次数已用完，请充值后继续使用</div>
+      </div>
+      <div class="modal-body">
+        <div style="background:rgba(255,77,109,0.08);border:1px solid rgba(255,77,109,0.2);border-radius:10px;padding:16px;margin-bottom:20px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="font-size:24px;">💳</span>
+            <div>
+              <div style="color:var(--text);font-weight:600;font-size:14px;margin-bottom:4px;">使用卡密激活</div>
+              <div style="color:var(--muted);font-size:12px;">输入卡密即可增加解析次数</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:rgba(123,47,255,0.08);border:1px solid rgba(123,47,255,0.2);border-radius:10px;padding:16px;margin-bottom:20px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="font-size:24px;">👑</span>
+            <div>
+              <div style="color:var(--text);font-weight:600;font-size:14px;margin-bottom:4px;">开通会员</div>
+              <div style="color:var(--muted);font-size:12px;">享受无限次解析 + 更多特权</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button class="modal-btn" style="flex:1;background:linear-gradient(135deg,#7b2fff,#00d4ff);" onclick="goToRecharge()">
+            💰 立即充值
+          </button>
+          <button class="modal-btn" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid var(--border);" onclick="closeUsageLimitModal()">
+            稍后再说
+          </button>
         </div>
       </div>
     </div>
