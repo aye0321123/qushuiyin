@@ -1,0 +1,39 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 抖音官方风格 - 三色偏移音符效果 -->
+  
+  <!-- 黑色背景 -->
+  <rect width="400" height="400" fill="#000000"/>
+  
+  <!-- 青色音符（右上偏移） -->
+  <g transform="translate(206, 196)" opacity="1">
+    <path d="M 0 80 Q -25 80 -25 55 Q -25 30 0 30 Q 25 30 25 55 Q 25 80 0 80 Z" fill="#00f2ea"/>
+    <path d="M 0 30 Q -18 30 -18 12 Q -18 -6 0 -6 Q 18 -6 18 12 Q 18 30 0 30 Z" fill="#00f2ea"/>
+    <rect x="15" y="-80" width="16" height="110" fill="#00f2ea" rx="8"/>
+    <ellipse cx="33" cy="-80" rx="22" ry="13" fill="#00f2ea"/>
+  </g>
+  
+  <!-- 粉红色音符（左下偏移） -->
+  <g transform="translate(194, 204)" opacity="1">
+    <path d="M 0 80 Q -25 80 -25 55 Q -25 30 0 30 Q 25 30 25 55 Q 25 80 0 80 Z" fill="#fe2c55"/>
+    <path d="M 0 30 Q -18 30 -18 12 Q -18 -6 0 -6 Q 18 -6 18 12 Q 18 30 0 30 Z" fill="#fe2c55"/>
+    <rect x="15" y="-80" width="16" height="110" fill="#fe2c55" rx="8"/>
+    <ellipse cx="33" cy="-80" rx="22" ry="13" fill="#fe2c55"/>
+  </g>
+  
+  <!-- 白色主音符（中间） -->
+  <g transform="translate(200, 200)" opacity="1">
+    <path d="M 0 80 Q -25 80 -25 55 Q -25 30 0 30 Q 25 30 25 55 Q 25 80 0 80 Z" fill="#ffffff"/>
+    <path d="M 0 30 Q -18 30 -18 12 Q -18 -6 0 -6 Q 18 -6 18 12 Q 18 30 0 30 Z" fill="#ffffff"/>
+    <rect x="15" y="-80" width="16" height="110" fill="#ffffff" rx="8"/>
+    <ellipse cx="33" cy="-80" rx="22" ry="13" fill="#ffffff"/>
+  </g>
+  
+  <!-- KIRO 文字 -->
+  <text x="200" y="350" 
+        font-family="Arial Black, sans-serif" 
+        font-size="48" 
+        font-weight="900" 
+        text-anchor="middle"
+        fill="#ffffff"
+        letter-spacing="3">KIRO</text>
+</svg>

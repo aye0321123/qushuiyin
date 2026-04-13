@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试页面</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .container {
+      text-align: center;
+      background: rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+    h1 { font-size: 48px; margin: 0 0 20px; }
+    p { font-size: 18px; margin: 10px 0; }
+    .success { color: #00ff88; font-size: 24px; margin: 20px 0; }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      background: white;
+      color: #667eea;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 部署成功！</h1>
+    <p class="success">✅ 你的网站已经在线了！</p>
+    <p>如果你能看到这个页面，说明部署完全正常。</p>
+    <p>现在可以访问完整版本了：</p>
+    <a href="index.html" class="btn">📱 用户端</a>
+    <a href="admin.html" class="btn">🔧 管理后台</a>
+    <hr style="margin: 30px 0; border: 1px solid rgba(255,255,255,0.3);">
+    <p style="font-size: 14px; opacity: 0.8;">
+      当前时间：<span id="time"></span><br>
+      设备类型：<span id="device"></span>
+    </p>
+  </div>
+  <script>
+    // 显示当前时间
+    document.getElementById('time').textContent = new Date().toLocaleString('zh-CN');
+    
+    // 检测设备
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    document.getElementById('device').textContent = isMobile ? '📱 移动设备' : '💻 电脑';
+  </script>
+</body>
+</html>

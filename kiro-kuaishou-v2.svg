@@ -1,0 +1,32 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 快手风格 V2 - 扁平简约 -->
+  
+  <!-- 纯色橙红背景 -->
+  <rect width="400" height="400" fill="#ff5722" rx="90"/>
+  
+  <!-- 播放按钮造型 -->
+  <g transform="translate(200, 150)">
+    <!-- 圆形 -->
+    <circle cx="0" cy="0" r="70" fill="#ffffff" opacity="0.2"/>
+    <circle cx="0" cy="0" r="55" fill="#ffffff" opacity="0.25"/>
+    
+    <!-- 播放三角形 -->
+    <polygon points="-15,-25 -15,25 25,0" fill="#ffffff" opacity="0.35"/>
+  </g>
+  
+  <!-- KIRO 文字 -->
+  <text x="200" y="300" 
+        font-family="Arial Black, sans-serif" 
+        font-size="90" 
+        font-weight="900" 
+        text-anchor="middle"
+        fill="#ffffff"
+        letter-spacing="-3">KIRO</text>
+  
+  <!-- 装饰线 -->
+  <line x1="80" y1="330" x2="320" y2="330" 
+        stroke="#ffffff" 
+        stroke-width="4" 
+        stroke-linecap="round"
+        opacity="0.3"/>
+</svg>

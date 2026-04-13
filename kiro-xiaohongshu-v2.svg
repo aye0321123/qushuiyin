@@ -1,0 +1,40 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 小红书风格 V2 - 极简版 -->
+  
+  <!-- 渐变红色背景 -->
+  <defs>
+    <linearGradient id="xhsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff2442"/>
+      <stop offset="100%" style="stop-color:#d81e3a"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="url(#xhsGrad)" rx="90"/>
+  
+  <!-- 白色边框装饰 -->
+  <rect x="60" y="60" width="280" height="280" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="4"
+        rx="60"
+        opacity="0.25"/>
+  
+  <!-- KIRO 超大字 -->
+  <text x="200" y="250" 
+        font-family="Arial Rounded MT Bold, Helvetica, sans-serif" 
+        font-size="130" 
+        font-weight="900" 
+        text-anchor="middle"
+        fill="#ffffff"
+        letter-spacing="-6">KIRO</text>
+  
+  <!-- 底部小字 -->
+  <text x="200" y="310" 
+        font-family="Arial, sans-serif" 
+        font-size="16" 
+        font-weight="400" 
+        text-anchor="middle"
+        fill="#ffffff"
+        letter-spacing="8"
+        opacity="0.7">VIDEO</text>
+</svg>

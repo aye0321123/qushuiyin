@@ -1,0 +1,32 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 视频号风格 Logo -->
+  
+  <!-- 绿色圆形背景 -->
+  <circle cx="200" cy="200" r="200" fill="#07c160"/>
+  
+  <!-- 对勾图标 -->
+  <g transform="translate(200, 160)">
+    <path d="M -80 0 L -30 50 L 100 -80" 
+          stroke="#ffffff" 
+          stroke-width="40" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+  </g>
+  
+  <!-- KIRO 文字 -->
+  <text x="200" y="310" 
+        font-family="Helvetica Neue, Arial, sans-serif" 
+        font-size="70" 
+        font-weight="700" 
+        text-anchor="middle"
+        fill="#ffffff"
+        letter-spacing="4">KIRO</text>
+  
+  <!-- 底部装饰线 -->
+  <line x1="100" y1="335" x2="300" y2="335" 
+        stroke="#ffffff" 
+        stroke-width="3" 
+        stroke-linecap="round"
+        opacity="0.5"/>
+</svg>

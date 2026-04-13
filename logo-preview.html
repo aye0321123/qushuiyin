@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIRO Logo 预览 - 四大平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 42px;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.9);
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .logo-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .logo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    }
+
+    .platform-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .platform-icon {
+      font-size: 24px;
+    }
+
+    .logo-preview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 15px;
+      min-height: 280px;
+    }
+
+    .logo-preview img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .version-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .version-tab {
+      flex: 1;
+      padding: 8px 16px;
+      background: #e9ecef;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: #666;
+      transition: all 0.2s;
+    }
+
+    .version-tab.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+
+    .version-tab:hover {
+      background: #dee2e6;
+    }
+
+    .version-tab.active:hover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .logo-info {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      border-left: 4px solid;
+    }
+
+    .douyin-card .logo-info { border-color: #ff0050; }
+    .xiaohongshu-card .logo-info { border-color: #ff2442; }
+    .kuaishou-card .logo-info { border-color: #ff6a00; }
+    .shipin-card .logo-info { border-color: #07c160; }
+
+    .download-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: transform 0.2s;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.02);
+    }
+
+    .download-btn:active {
+      transform: scale(0.98);
+    }
+
+    .tips {
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+
+    .tips h3 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .tips ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .tips li {
+      padding: 8px 0;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .tips li:before {
+      content: "✓ ";
+      color: #667eea;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 32px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 KIRO Logo 预览</h1>
+    <p class="subtitle">四大短视频平台专用头像 · 高清矢量 · 1:1 正方形</p>
+
+    <div class="grid">
+      <!-- 抖音 -->
+      <div class="logo-card douyin-card">
+        <div class="platform-name">
+          <span class="platform-icon">🎵</span>
+          抖音 Douyin
+        </div>
+        <div class="version-tabs">
+          <button class="version-tab active" onclick="switchVersion('douyin', 1, this)">版本 1</button>
+          <button class="version-tab" onclick="switchVersion('douyin', 2, this)">版本 2</button>
+        </div>
+        <div class="logo-preview">
+          <img id="douyin-logo" src="kiro-douyin-logo.svg" alt="抖音 Logo" width="250">
+        </div>
+        <div class="logo-info">
+          <strong>设计特点：</strong><br>
+          音符造型 + 黑红青渐变配色<br>
+          扁平化矢量，潮流动感
+        </div>
+        <button class="download-btn" onclick="downloadLogo('douyin')">⬇ 下载当前版本</button>
+      </div>
+
+      <!-- 小红书 -->
+      <div class="logo-card xiaohongshu-card">
+        <div class="platform-name">
+          <span class="platform-icon">📕</span>
+          小红书 Xiaohongshu
+        </div>
+        <div class="version-tabs">
+          <button class="version-tab active" onclick="switchVersion('xiaohongshu', 1, this)">版本 1</button>
+          <button class="version-tab" onclick="switchVersion('xiaohongshu', 2, this)">版本 2</button>
+        </div>
+        <div class="logo-preview">
+          <img id="xiaohongshu-logo" src="kiro-xiaohongshu-logo.svg" alt="小红书 Logo" width="250">
+        </div>
+        <div class="logo-info">
+          <strong>设计特点：</strong><br>
+          圆角红底 + 白色圆润字体<br>
+          INS 极简风，干净高级
+        </div>
+        <button class="download-btn" onclick="downloadLogo('xiaohongshu')">⬇ 下载当前版本</button>
+      </div>
+
+      <!-- 快手 -->
+      <div class="logo-card kuaishou-card">
+        <div class="platform-name">
+          <span class="platform-icon">⚡</span>
+          快手 Kuaishou
+        </div>
+        <div class="version-tabs">
+          <button class="version-tab active" onclick="switchVersion('kuaishou', 1, this)">版本 1</button>
+          <button class="version-tab" onclick="switchVersion('kuaishou', 2, this)">版本 2</button>
+        </div>
+        <div class="logo-preview">
+          <img id="kuaishou-logo" src="kiro-kuaishou-logo.svg" alt="快手 Logo" width="250">
+        </div>
+        <div class="logo-info">
+          <strong>设计特点：</strong><br>
+          摄像机几何造型 + 橙红渐变<br>
+          扁平化线条，醒目大气
+        </div>
+        <button class="download-btn" onclick="downloadLogo('kuaishou')">⬇ 下载当前版本</button>
+      </div>
+
+      <!-- 视频号 -->
+      <div class="logo-card shipin-card">
+        <div class="platform-name">
+          <span class="platform-icon">✓</span>
+          视频号 Channels
+        </div>
+        <div class="version-tabs">
+          <button class="version-tab active" onclick="switchVersion('shipin', 1, this)">版本 1</button>
+          <button class="version-tab" onclick="switchVersion('shipin', 2, this)">版本 2</button>
+        </div>
+        <div class="logo-preview">
+          <img id="shipin-logo" src="kiro-shipin-logo.svg" alt="视频号 Logo" width="250">
+        </div>
+        <div class="logo-info">
+          <strong>设计特点：</strong><br>
+          绿色对勾造型 + 商务字体<br>
+          极简商务，专业可信
+        </div>
+        <button class="download-btn" onclick="downloadLogo('shipin')">⬇ 下载当前版本</button>
+      </div>
+    </div>
+
+    <div class="tips">
+      <h3>💡 使用说明</h3>
+      <ul>
+        <li>所有 Logo 均为 400x400px 高清矢量 SVG 格式</li>
+        <li>支持无损缩放，适配各种尺寸需求</li>
+        <li>每个平台提供 2 个版本供选择</li>
+        <li>点击"下载当前版本"按钮可保存 Logo</li>
+        <li>建议根据平台风格选择对应的 Logo 版本</li>
+        <li>可直接用作短视频平台头像或品牌标识</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const currentVersions = {
+      douyin: 1,
+      xiaohongshu: 1,
+      kuaishou: 1,
+      shipin: 1
+    };
+
+    function switchVersion(platform, version, button) {
+      // 更新按钮状态
+      const card = button.closest('.logo-card');
+      card.querySelectorAll('.version-tab').forEach(tab => tab.classList.remove('active'));
+      button.classList.add('active');
+
+      // 更新图片
+      const img = document.getElementById(platform + '-logo');
+      const filename = version === 1 
+        ? `kiro-${platform}-logo.svg` 
+        : `kiro-${platform}-v2.svg`;
+      img.src = filename;
+
+      // 记录当前版本
+      currentVersions[platform] = version;
+    }
+
+    function downloadLogo(platform) {
+      const version = currentVersions[platform];
+      const filename = version === 1 
+        ? `kiro-${platform}-logo.svg` 
+        : `kiro-${platform}-v2.svg`;
+      
+      const link = document.createElement('a');
+      link.href = filename;
+      link.download = filename;
+      link.click();
+
+      // 显示提示
+      const btn = event.target;
+      const originalText = btn.textContent;
+      btn.textContent = '✓ 下载成功';
+      btn.style.background = 'linear-gradient(135deg, #00b09b 0%, #96c93d 100%)';
+      
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
