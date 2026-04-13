@@ -1,0 +1,66 @@
+🔍 GitHub Pages 部署检查
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+您的仓库：https://github.com/aye0321123/qushuiyin
+
+可能的网站地址（请依次尝试）：
+
+1. https://aye0321123.github.io/qushuiyin/
+2. https://aye0321123.github.io/qushuiyin/index.html
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+如果都显示 404，请按照以下步骤启用 GitHub Pages：
+
+第一步：访问仓库设置
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+访问：https://github.com/aye0321123/qushuiyin/settings/pages
+
+第二步：配置 GitHub Pages
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 在 "Source" 下拉菜单中选择：Branch: main
+2. 文件夹选择：/ (root)
+3. 点击 "Save" 按钮
+
+第三步：等待部署
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 等待 1-2 分钟
+2. 页面会显示：
+   "Your site is live at https://aye0321123.github.io/qushuiyin/"
+3. 点击链接访问
+
+第四步：查看部署状态
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+访问：https://github.com/aye0321123/qushuiyin/actions
+
+查看部署进度（应该有绿色勾号 ✅）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+常见问题：
+
+Q: 为什么显示 404？
+A: 可能原因：
+   1. GitHub Pages 还没有启用
+   2. 部署还在进行中（需要等待 1-2 分钟）
+   3. 仓库是私有的（需要改为公开）
+
+Q: 如何确认部署成功？
+A: 
+   1. 访问 Settings → Pages
+   2. 看到 "Your site is live at..." 的绿色提示
+   3. Actions 页面显示绿色勾号
+
+Q: 仓库是私有的怎么办？
+A:
+   1. 访问：https://github.com/aye0321123/qushuiyin/settings
+   2. 滚动到底部 "Danger Zone"
+   3. 点击 "Change visibility"
+   4. 选择 "Make public"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
